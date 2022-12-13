@@ -1,10 +1,12 @@
+require('dotenv').config()
+
 const config = {
     db: {
         host: 'localhost',
-        user: 'root',
-        password: 'passedc12',
-        port: 3307,
-        database: 'restfulapi'
+        user: process.env.MYSQL_USER,
+        password: process.env.MYSQL_PASSWORD,
+        port: 3306,
+        database: process.env.MYSQL_DATABASE
     },
     listPerPage: 20
 }

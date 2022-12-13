@@ -32,7 +32,7 @@
             },
             "previewLimit": 50,
             "server": "localhost",
-            "port": 3307,
+            "port": 3306,
             "driver": "MySQL",
             "name": "restfulApiConnection",
             "database": "restfulApi",
