@@ -18,7 +18,7 @@ async function getMuliple(page=1) {
     return { data, meta }
 }
 
-// get on language
+// get one language
 async function getOne(id=1) {
     let searchOne = `
     SELECT * FROM programming_languages where id = ${id}`
