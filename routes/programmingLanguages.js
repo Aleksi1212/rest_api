@@ -17,7 +17,7 @@ router
         }
     })
 
-    // api gey request calls getOne function
+    // api get request calls getOne function
     .get('/:id', async function(req, res, next) {
         try {
             res.json(
