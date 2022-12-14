@@ -17,6 +17,20 @@ router
         }
     })
 
+    // api gey request calls getOne function
+    .get('/:id', async function(req, res, next) {
+        try {
+            res.json(
+                await prog_langs.getOne(req.params.id)
+            )
+        }
+
+        catch(err) {
+            console.log(`Error while getting programming language ${err.message}`);
+            next(err)
+        }
+    })
+
     // api post request calls create funciton
     .post('/', async function(req, res, next) {
         try {

@@ -18,6 +18,19 @@ async function getMuliple(page=1) {
     return { data, meta }
 }
 
+// get on language
+async function getOne(id=1) {
+    let searchOne = `
+    SELECT * FROM programming_languages where id = ${id}`
+
+    const result = await db.query(searchOne)
+
+    const data = helper.emptyOrRows(result)
+    const meta = {id}
+
+    return{ data, meta }
+}
+
 // add new language to database
 async function create(prog_lang) {
     let addData = `
@@ -71,4 +84,4 @@ async function remove(id) {
     return { message }
 }
 
-module.exports = { getMuliple, create, update, remove }
+module.exports = { getMuliple, getOne, create, update, remove }
